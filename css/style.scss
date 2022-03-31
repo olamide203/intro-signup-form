@@ -1,0 +1,117 @@
+/* colors*/
+:root {
+    --primary-red: hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+    --accent-blue: hsl(248, 32%, 49%);
+    --neutral-100: hsl(246, 25%, 77%);
+    --neutral-400: hsl(249, 10%, 26%);
+    font-size: 16px;
+}
+
+body {
+    background: url("../images/bg-intro-desktop.png") center/cover no-repeat,
+        linear-gradient(var(--primary-red), var(--primary-red));
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+main {
+    display: grid;
+    padding: 0 200px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    font-family: "Poppins";
+    color: #fff;
+}
+
+.intro {
+    display: grid;
+    gap: 20px;
+    &__heading {
+        justify-self: center;
+        align-self: end;
+        font-size: 2.5rem;
+    }
+    &__paragraph {
+        justify-self: center;
+        align-self: start;
+        font-size: 0.78rem;
+    }
+}
+
+.signup {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 40px;
+    &__heading {
+        display: grid;
+        background-color: var(--accent-blue);
+        padding: 15px 0;
+        border-radius: 5px;
+    }
+    &__text {
+        font-size: 0.8rem;
+        justify-self: center;
+    }
+    &__card {
+        background-color: #fff;
+        padding: 30px;
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 20px;
+        border-radius: 5px;
+    }
+    &__button {
+        width: 100%;
+        background-color: var(--primary-green);
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 10px 0;
+        margin-top: 10px;
+        border-bottom: 3px solid var(--primary-green);
+    }
+    &__button:hover {
+        cursor: pointer;
+        background-color: hsla(154, 59%, 51%, 0.8);
+    }
+}
+
+.input-group {
+    display: grid;
+    gap: 2px;
+    padding: 8px;
+    input {
+        height: 50px;
+        padding: 20px;
+        border: 1px solid var(--neutral-100);
+        border-radius: 5px;
+        font-size: 0.9rem;
+    }
+    input::placeholder {
+        color: var(--neutral-400);
+    }
+    input:focus {
+        border: 1px solid var(--accent-blue);
+        border-bottom: 2px solid var(--neutral-100);
+        outline: none;
+    }
+    &__help {
+        color: hsl(0, 100%, 74%);
+        font-size: 0.7rem;
+        font-weight: 600;
+        font-style: italic;
+        justify-self: end;
+        position: relative;
+    }
+    &__help:before {
+        content: " ";
+        background: url("../images/icon-error.svg") center/contain no-repeat;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        right: 10px;
+        top: -35px;
+    }
+}

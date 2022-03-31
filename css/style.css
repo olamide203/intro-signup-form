@@ -1,0 +1,164 @@
+/* colors*/
+:root {
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+  --accent-blue: hsl(248, 32%, 49%);
+  --neutral-100: hsl(246, 25%, 77%);
+  --neutral-400: hsl(249, 10%, 26%);
+  font-size: 16px;
+}
+
+body {
+  background: url("../images/bg-intro-desktop.png") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, from(var(--primary-red)), to(var(--primary-red)));
+  background: url("../images/bg-intro-desktop.png") center/cover no-repeat, linear-gradient(var(--primary-red), var(--primary-red));
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  padding: 0 200px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 100px;
+          column-gap: 100px;
+  font-family: "Poppins";
+  color: #fff;
+}
+
+.intro {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+}
+
+.intro__heading {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: 2.5rem;
+}
+
+.intro__paragraph {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  font-size: 0.78rem;
+}
+
+.signup {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 40px;
+}
+
+.signup__heading {
+  display: -ms-grid;
+  display: grid;
+  background-color: var(--accent-blue);
+  padding: 15px 0;
+  border-radius: 5px;
+}
+
+.signup__text {
+  font-size: 0.8rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.signup__card {
+  background-color: #fff;
+  padding: 30px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 20px;
+  border-radius: 5px;
+}
+
+.signup__button {
+  width: 100%;
+  background-color: var(--primary-green);
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin-top: 10px;
+  border-bottom: 3px solid var(--primary-green);
+}
+
+.signup__button:hover {
+  cursor: pointer;
+  background-color: rgba(56, 204, 140, 0.8);
+}
+
+.input-group {
+  display: -ms-grid;
+  display: grid;
+  gap: 2px;
+  padding: 8px;
+}
+
+.input-group input {
+  height: 50px;
+  padding: 20px;
+  border: 1px solid var(--neutral-100);
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.input-group input::-webkit-input-placeholder {
+  color: var(--neutral-400);
+}
+
+.input-group input:-ms-input-placeholder {
+  color: var(--neutral-400);
+}
+
+.input-group input::-ms-input-placeholder {
+  color: var(--neutral-400);
+}
+
+.input-group input::placeholder {
+  color: var(--neutral-400);
+}
+
+.input-group input:focus {
+  border: 1px solid var(--accent-blue);
+  border-bottom: 2px solid var(--neutral-100);
+  outline: none;
+}
+
+.input-group__help {
+  color: #ff7a7a;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-style: italic;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  position: relative;
+}
+
+.input-group__help:before {
+  content: " ";
+  background: url("../images/icon-error.svg") center/contain no-repeat;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  top: -35px;
+}
+/*# sourceMappingURL=style.css.map */
