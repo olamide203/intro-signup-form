@@ -19,7 +19,7 @@ main {
     display: grid;
     margin: 0 10%;
     grid-template-columns: 1fr 1fr;
-    column-gap: 100px;
+    column-gap: 60px;
     font-family: "Poppins";
     color: #fff;
 }
@@ -30,29 +30,33 @@ main {
     &__heading {
         justify-self: start;
         align-self: end;
-        font-size: 2.5rem;
+        line-height: 1.2;
+        font-size: 3rem;
     }
     &__paragraph {
         justify-self: start;
         align-self: start;
-        font-size: 0.9rem;
+        font-size: 0.91rem;
     }
 }
 
 .signup {
     display: grid;
     grid-auto-flow: row;
-    row-gap: 40px;
+    row-gap: 30px;
     &__heading {
         display: grid;
         background-color: var(--accent-blue);
-        padding: 15px 20%;
+        padding: 15px 10%;
         text-align: center;
         border-radius: 5px;
+        // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 20px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
     &__text {
         font-size: 0.8rem;
-        justify-self: center;
+        // justify-self: center;
     }
     &__card {
         background-color: #fff;
@@ -61,6 +65,8 @@ main {
         grid-auto-flow: row;
         row-gap: 20px;
         border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
     &__button {
         width: 100%;
@@ -69,7 +75,7 @@ main {
         border: none;
         color: #fff;
         text-transform: uppercase;
-        padding: 10px 0;
+        padding: 15px 0;
         margin-top: 10px;
         border-bottom: 3px solid var(--primary-green);
     }
@@ -91,7 +97,8 @@ main {
         font-size: 0.9rem;
     }
     input::placeholder {
-        color: var(--neutral-400);
+        color: var(--neutral-100);
+        font-weight: 600;
     }
     input:focus {
         border: 1px solid var(--accent-blue);
@@ -106,6 +113,8 @@ main {
         font-style: italic;
         justify-self: end;
         position: relative;
+        transform: scale(0);
+        transition: all 4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
     &__help:before {
         content: " ";
@@ -132,10 +141,15 @@ main {
 .invalid {
     .input-group__help {
         display: block;
+        transform: scale(1);
     }
     input {
         border: 1px solid var(--primary-red);
     }
+}
+
+.bold {
+    font-weight: 700;
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
@@ -160,6 +174,18 @@ main {
         &__paragraph {
             justify-self: center;
             text-align: center;
+        }
+    }
+    .signup {
+        max-width: 500px;
+        justify-self: center;
+        &__heading {
+            padding: 15px 20%;
+        }
+        &__heading,
+        &__card {
+            justify-self: center;
+            width: 100%;
         }
     }
 }

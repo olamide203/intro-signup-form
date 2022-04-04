@@ -46,8 +46,8 @@
                     </p>
                 </div>
                 <div class="signup__card">
-                    <form action="#">
-                        <div class="input-group invalid">
+                    <form action="#" method="post" id="signup__form">
+                        <div class="input-group">
                             <input
                                 type="text"
                                 placeholder="First Name"
@@ -90,7 +90,11 @@
                         </div>
                     </form>
                     <div class="card__footer">
-                        <button type="submit" class="signup__button">
+                        <button
+                            type="submit"
+                            form="signup__form"
+                            class="signup__button"
+                        >
                             Claim your free trial
                         </button>
                         <p class="card__footnote">
@@ -112,5 +116,6 @@
                 >. Coded by <a href="#">Your Name Here</a>.
             </p>
         </footer> -->
+        <script src="./src/app.js"></script>
     </body>
 </html>
