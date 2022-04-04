@@ -46,7 +46,11 @@
                     </p>
                 </div>
                 <div class="signup__card">
-                    <form action="#" method="post" id="signup__form">
+                    <form
+                        action="http://www.javascript.info"
+                        method="get"
+                        id="signup__form"
+                    >
                         <div class="input-group">
                             <input
                                 type="text"
@@ -73,6 +77,7 @@
                                 type="text"
                                 placeholder="Email Address "
                                 id="email"
+                                autocomplete="username"
                             />
                             <span class="input-group__help"
                                 >Looks like this is not an email</span
@@ -83,6 +88,7 @@
                                 type="password"
                                 placeholder="Password"
                                 id="password"
+                                autocomplete="current-password"
                             />
                             <span class="input-group__help"
                                 >Password cannot be empty</span

@@ -4,13 +4,27 @@ const lastName = document.getElementById("lastname");
 const password = document.getElementById("password");
 const email = document.getElementById("email");
 // add an event listener to the form for the submit event
-singupForm.addEventListener("submit", (event) => {
+singupForm.addEventListener("submit", submitForm);
+singupForm.addEventListener("input", (event) => {
+    event.target.parentElement.classList.remove("invalid");
+});
+
+// handle form submission
+function submitForm(event) {
     event.preventDefault();
+    console.log("hello");
     validateInput(lastName);
     validateInput(firstName);
     validateEmail(email);
     validatePassword(password);
-});
+    // if there is no invalid input, allow form to get submitted
+
+    if (!document.getElementsByClassName("invalid").length) {
+        console.log("world");
+        singupForm.removeEventListener("submit", submitForm);
+        singupForm.submit();
+    }
+}
 
 function validateInput(element) {
     // check if input is empty
@@ -24,7 +38,6 @@ function validateInput(element) {
 function validateEmail(element) {
     const re =
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    console.log(re.test(element.value));
     if (!re.test(element.value)) {
         element.parentElement.classList.add("invalid");
         console.log(element.parentElement);
