@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://github.com/olamide203/intro-component-with-signup-form)
--   Live Site URL: [Add live site URL here](https://olamide203.github.io/intro-component-with-signup-form/)
+-   Solution URL: [intro-component-with-signup](https://github.com/olamide203/intro-component-with-signup-form)
+-   Live Site URL: [intro-component-with-signup](https://olamide203.github.io/intro-component-with-signup-form/)
 
 ## My process
 
