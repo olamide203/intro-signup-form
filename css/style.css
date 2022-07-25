@@ -17,15 +17,15 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: url("../images/bg-intro-desktop.png") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, from(var(--primary-red)), to(var(--primary-red)));
+  background: url("../images/bg-intro-desktop.png") center/cover no-repeat, linear-gradient(var(--primary-red), var(--primary-red));
 }
 
 main {
-  background: url("../images/bg-intro-desktop.png") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, from(var(--primary-red)), to(var(--primary-red)));
-  background: url("../images/bg-intro-desktop.png") center/cover no-repeat, linear-gradient(var(--primary-red), var(--primary-red));
-  height: 100vh;
+  min-height: 100vh;
   display: -ms-grid;
   display: grid;
-  padding: 0 10%;
+  padding: 0 5%;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -webkit-column-gap: 60px;
@@ -129,6 +129,11 @@ main {
   font-size: 0.9rem;
 }
 
+.input-group input body {
+  background: url("../images/bg-intro-mobile.png") center/cover repeat, -webkit-gradient(linear, left top, left bottom, from(var(--primary-red)), to(var(--primary-red)));
+  background: url("../images/bg-intro-mobile.png") center/cover repeat, linear-gradient(var(--primary-red), var(--primary-red));
+}
+
 .input-group input::-webkit-input-placeholder {
   color: var(--neutral-100);
   font-weight: 600;
@@ -210,7 +215,7 @@ main {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
   main {
-    margin: 0 5%;
+    min-height: auto;
     -webkit-column-gap: 50px;
             column-gap: 50px;
   }
@@ -218,7 +223,7 @@ main {
 
 @media only screen and (max-width: 768px) {
   main {
-    margin: 5%;
+    margin: 80px 20px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-auto-flow: row;
@@ -246,6 +251,13 @@ main {
     -ms-grid-column-align: center;
         justify-self: center;
     width: 100%;
+  }
+}
+
+@media only screen and (max-height: 375) {
+  body {
+    background: url("../images/bg-intro-mobile.png") center/cover repeat, -webkit-gradient(linear, left top, left bottom, from(var(--primary-red)), to(var(--primary-red)));
+    background: url("../images/bg-intro-mobile.png") center/cover repeat, linear-gradient(var(--primary-red), var(--primary-red));
   }
 }
 
