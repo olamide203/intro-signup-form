@@ -12,13 +12,13 @@ body {
     display: grid;
     align-items: center;
     justify-content: center;
-}
-main {
     background: url("../images/bg-intro-desktop.png") center/cover no-repeat,
         linear-gradient(var(--primary-red), var(--primary-red));
-    height: 100vh;
+}
+main {
+    min-height: 100vh;
     display: grid;
-    padding: 0 10%;
+    padding: 0 5%;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
     font-family: "Poppins";
@@ -96,7 +96,10 @@ main {
         height: 50px;
         padding: 20px;
         border: 1px solid var(--neutral-100);
-        border-radius: 5px;
+        border-radius: 5px;body{
+            background: url("../images/bg-intro-mobile.png") center/cover repeat,
+                linear-gradient(var(--primary-red), var(--primary-red));
+        }
         font-size: 0.9rem;
     }
     input::placeholder {
@@ -157,14 +160,15 @@ main {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
     main {
-        margin: 0 5%;
+        // margin: 0 5%;
+        min-height: auto;
         column-gap: 50px;
     }
 }
 
 @media only screen and (max-width: 768px) {
     main {
-        margin: 5%;
+        margin: 80px 20px;
         grid-template-columns: 1fr;
         grid-auto-flow: row;
         row-gap: 80px;
@@ -191,6 +195,14 @@ main {
             width: 100%;
         }
     }
+}
+
+@media only screen and(max-height:375){
+    body{
+        background: url("../images/bg-intro-mobile.png") center/cover repeat,
+            linear-gradient(var(--primary-red), var(--primary-red));
+    }
+    
 }
 
 .attribution {
